@@ -28,6 +28,8 @@ import { ListaTipodocumentoComponent } from './lista-tipodocumento/lista-tipodoc
 import { RegistrarTipodocumentoComponent } from './registrar-tipodocumento/registrar-tipodocumento.component';
 import { ActualizarTipodocumentoComponent } from './actualizar-tipodocumento/actualizar-tipodocumento.component';
 import { DetalleTipodocumentoComponent } from './detalle-tipodocumento/detalle-tipodocumento.component';
+import { ListaBonificacionComponent } from './lista-bonificacion/lista-bonificacion.component';
+import { RegistrarBonificacionComponent } from './registrar-bonificacion/registrar-bonificacion.component';
 
 const routes: Routes = [
   {path : 'departamentos', component : ListaDepartamentoComponent},
@@ -64,7 +66,12 @@ const routes: Routes = [
   {path : '',redirectTo: 'tiposdocumentos', pathMatch : 'full'},
   {path : 'registrar-tipodocumento', component : RegistrarTipodocumentoComponent}, 
   {path : 'actualizar-tipodocumento/:id',component : ActualizarTipodocumentoComponent},
-  {path : 'detalle-tipodocumento/:id',component : DetalleTipodocumentoComponent}
+  {path : 'detalle-tipodocumento/:id',component : DetalleTipodocumentoComponent},
+  {path : 'bonificaciones', component : ListaBonificacionComponent},
+  {path : '',redirectTo: 'bonificaciones', pathMatch : 'full'},
+  {path : 'registrar-bonificacion', component : RegistrarBonificacionComponent}
+  
+ 
   
 
   

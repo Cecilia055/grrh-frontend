@@ -1,1 +1,27 @@
-<p>lista-bonificacion works!</p>
+<h2>Lista de Bonificaciones</h2>
+<table class="table table-striped">
+<thead class="table-dark">
+    <tr>
+        <th>Tipo</th>
+        <th>Monto</th>
+        <th>Fecha</th>
+        <th>id empleado</th>
+        
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor= "let bonificacion of bonificacion">
+    <td>{{bonificacion.tipo}}</td> 
+    <td>{{bonificacion.monto}}</td>
+    <td>{{bonificacion.fecha}}</td>
+    <td>{{bonificacion.id_empleado}}</td>
+   
+
+    <button (click)= "actualizarBonificacion(bonificacion.idbonificacion)" class="btn btn-info">Editar</button>
+    <button (click)= "eliminarBonificacion(bonificacion.idbonificacion)" class="btn btn-danger" style="margin-left: 10px">Eliminar</button>
+    <button (click)= "verDetallesDeBonificacion(bonificacion.idbonificacion)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
+  
+</tr>
+</tbody>
+</table>
+

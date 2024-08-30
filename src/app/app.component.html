@@ -97,8 +97,23 @@
                         </ul>
                         </nav>
                         
-                        <h1 class="text-center">{{title}}</h1>
                         <div class="container">
                             <router-outlet></router-outlet>
                         </div>
+
+                        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a routerLink="bonificaciones" routerLinkActive="active" class="nav-link">Lista de Bonificaciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="registrar-bonificacion" routerLinkActive="active" class="nav-link">Añadir Bonificacion</a>
+                                </li>
+                            </ul>
+                            </nav>
+                            
+                            <h1 class="text-center">{{title}}</h1>
+                            <div class="container">
+                                <router-outlet></router-outlet>
+                            </div>
             

@@ -19,7 +19,7 @@ export class BonificacionService {
  }
 
  //Este metodo nos sirve para registrar un empleado
- registrarBonifiacion(bonificacion : Bonificacion) : Observable<Object>{
+ registrarBonificacion(bonificacion : Bonificacion) : Observable<Object>{
   return this.httpClient.post(`${this.baseURL}`, bonificacion);
 
  }
