@@ -33,6 +33,7 @@ import { ListaTipodocumentoComponent } from './lista-tipodocumento/lista-tipodoc
 import { RegistrarTipodocumentoComponent } from './registrar-tipodocumento/registrar-tipodocumento.component';
 import { ActualizarTipodocumentoComponent } from './actualizar-tipodocumento/actualizar-tipodocumento.component';
 import { DetalleTipodocumentoComponent } from './detalle-tipodocumento/detalle-tipodocumento.component';
+import { ListaBonificacionComponent } from './lista-bonificacion/lista-bonificacion.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { DetalleTipodocumentoComponent } from './detalle-tipodocumento/detalle-t
     ListaTipodocumentoComponent,
     RegistrarTipodocumentoComponent,
     ActualizarTipodocumentoComponent,
-    DetalleTipodocumentoComponent
+    DetalleTipodocumentoComponent,
+    ListaBonificacionComponent
   ],
   imports: [
     BrowserModule,
