@@ -1,0 +1,21 @@
+<h2>Lista de Tipos de Documentos</h2>
+<table class="table table-striped">
+<thead class="table-dark">
+    <tr>
+        <th>Tipo</th>   
+        <th>Descripcion</th>  
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor= "let tipodocumento of tipodocumento">
+    <td>{{tipodocumento.tipo}}</td>
+    <td>{{tipodocumento.descripcion}}</td>
+    
+    <button (click)= "actualizarTipoDocumento(tipodocumento.idtipodocumento)" class="btn btn-info">Editar</button>
+    <button (click)= "eliminarTipoDocumento(tipodocumento.idtipodocumento)" class="btn btn-danger" style="margin-left: 10px">Eliminar</button>
+    <button (click)= "verDetallesDelTipodeDocumento(tipodocumento.idtipodocumento)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
+  
+</tr>
+</tbody>
+</table>
+

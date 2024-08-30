@@ -1,0 +1,92 @@
+<div class="col-md-6 offset-md-3"></div>
+    <h3 class="text-center">Edición de Departamento</h3>
+
+    <form (ngSubmit)="onSubmit()" #departamentoForm="ngForm" >
+
+      <div class="form-group">
+      <label>Nombre Departamento : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombreDepartamento"
+        [(ngModel)]="departamento.nombreDepartamento"
+        name="nombreDepartamento"
+        required
+        minlength="4"
+        maxlength="30"
+        placeholder="Digite el nombre"
+        #nombreDepartamento="ngModel"
+      />
+      <div class="alert alert-danger" *ngIf="nombreDepartamento.invalid && (nombreDepartamento.dirty || nombreDepartamento.touched)">
+        <div *ngIf="nombreDepartamento.errors?.['required']">
+          Digite el nombre por favor
+        </div>
+        <div *ngIf="nombreDepartamento.errors?.['minlength']">
+          El nombre tiene que contener como mínimo 4 caracteres
+        </div>
+        <div *ngIf="nombreDepartamento.errors?.['maxlength']">
+          El nombre tiene que tener como máximo 30 caracteres
+        </div>
+      </div>
+      </div>
+      
+      <div class="form-group">
+        <label>Descripcion : </label>
+        <input
+          type="text"
+          class="form-control"
+          id="Descripcion"
+          [(ngModel)]="departamento.descripcion"
+          name="descripcion"
+          required
+          minlength="4"
+          maxlength="60"
+          placeholder="Digite la descripcion"
+          #descripcion="ngModel"
+        />
+
+        <div class="alert alert-danger" *ngIf="descripcion.invalid && (descripcion.dirty || descripcion.touched)">
+          <div *ngIf="descripcion.errors?.['required']">
+            Digite la Descripcion por favor
+          </div>
+          <div *ngIf="descripcion.errors?.['minlength']">
+            La descripcion tiene que contener como mínimo 4 caracteres
+          </div>
+          <div *ngIf="descripcion.errors?.['maxlength']">
+            La descripcion tiene que tener como máximo 60 caracteres
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Ubicacion: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="ubicacion"
+          [(ngModel)]="departamento.ubicacion"
+          name="Ubicacion"
+          required
+          minlength="4"
+          maxlength="30"
+          placeholder="Digite la ubicacion"
+          #Ubicacion="ngModel"
+        />
+
+        <div class="alert alert-danger" *ngIf="Ubicacion.invalid && (Ubicacion.dirty || Ubicacion.touched)">
+          <div *ngIf="Ubicacion.errors?.['required']">
+            Digite la ubicacion por favor
+          </div>
+          <div *ngIf="Ubicacion.errors?.['minlength']">
+            La ubicacion tiene que contener como mínimo 4 caracteres
+          </div>
+          <div *ngIf="Ubicacion.errors?.['maxlength']">
+            La ubicacion tiene que tener como máximo 30 caracteres
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-success" [disabled]="!departamentoForm.form.valid">Guardar</button>
+    </form>
+  
+  

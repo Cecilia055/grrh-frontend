@@ -1,0 +1,111 @@
+<div class="col-md-6 offset-md-3"></div>
+<h3 class="text-center">Registro de Empleado</h3>
+
+<form (ngSubmit)= "onSubmit()">
+
+    <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text"
+        class="form-control"
+        id="nombre"
+        [(ngModel)] = "empleado.nombre"
+        name ="nombre">  
+    </div>
+    <div class="form-group">
+        <label>Apellido:</label>
+        <input type="text"
+        class="form-control"
+        id="apellido"
+        [(ngModel)] = "empleado.apellido"
+        name ="apellido">
+    </div>
+    <div class="form-group">
+        <label>Genero :</label>
+        <input type="text"
+        class="form-control"
+        id="genero"
+        [(ngModel)] = "empleado.genero"
+        name ="genero">
+    </div>
+    <div class="form-group">
+        <label>Direccion :</label>
+        <input type="text"
+        class="form-control"
+        id="direccion"
+        [(ngModel)] = "empleado.direccion"
+        name ="direccion">
+    </div>
+    <div class="form-group">
+        <label>Telefono :</label>
+        <input type="text"
+        class="form-control"
+        id="telefono"
+        [(ngModel)] = "empleado.telefono"
+        name ="telefono">
+    </div>
+    <div class="form-group">
+        <label>Email :</label>
+        <input type="text"
+        class="form-control"
+        id="email"
+        [(ngModel)] = "empleado.email"
+        name ="email">
+    </div>
+    <div class="form-group">
+        <label>Fecha Contratacion :</label>
+        <input type="text"
+        class="form-control"
+        id="fecha_contratacion"
+        [(ngModel)] = "empleado.fecha_contratacion"
+        name ="fecha_contratacion">
+    </div>
+
+    <div class="form-group">
+        <label>Departamento Id :</label>
+        <input type="text"
+        class="form-control"
+        id="departamento_id"
+        [(ngModel)] = "empleado.departamento_id"
+        name ="departamento_id">
+    </div>
+
+    <div class="form-group">
+        <label>Estado :</label>
+        <input type="text"
+        class="form-control"
+        id="estado"
+        [(ngModel)] = "empleado.estado"
+        name ="estado">
+    </div>
+
+    <div class="form-group">
+        <label>Nacionalidad :</label>
+        <input type="text"
+        class="form-control"
+        id="nacionalidad"
+        [(ngModel)] = "empleado.nacionalidad"
+        name ="nacionalidad">
+    </div>
+
+    <div class="form-group">
+        <label>Id Tipo Documento :</label>
+        <input type="text"
+        class="form-control"
+        id="idtipo_documento"
+        [(ngModel)] = "empleado.idtipo_documento"
+        name ="idtipo_documento">
+    </div>
+    <div class="form-group">
+        <label>Numero Documento :</label>
+        <input type="text"
+        class="form-control"
+        id="numero_documento"
+        [(ngModel)] = "empleado.numero_documento"
+        name ="numero_documento">
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+</form>
+
+
+

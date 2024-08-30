@@ -1,0 +1,468 @@
+<div class="col-md-6 offset-md-3"></div>
+    <h3 class="text-center">Edición de Detalle de Planilla</h3>
+
+    <form (ngSubmit)="onSubmit()" #detalleplanillasForm="ngForm" >
+
+      <div class="form-group">
+      <label>Nombre Empleado : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre_empleado"
+        [(ngModel)]="detalleplanilla.nombre_empleado"
+        name="nombre_empleado"
+        required
+        minlength="1"
+        maxlength="30"
+        placeholder="Digite el nombre empleado"
+        #detalleplanillas="ngModel"
+      />
+      <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+        <div *ngIf="detalleplanillas.errors?.['required']">
+          Digite el nombre empleado por favor
+        </div>
+        <div *ngIf="detalleplanillas.errors?.['minlength']">
+          El nombre empleado tiene que contener como mínimo 1 caracteres
+        </div>
+        <div *ngIf="detalleplanillas.errors?.['maxlength']">
+          El nombre empleado tiene que tener como máximo 30 caracteres
+        </div>
+      </div>
+    </div>
+
+      <div class="form-group">
+      <label>Id Empleado : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="id_empleado"
+        [(ngModel)]="detalleplanilla.id_empleado"
+        name="id_empleado"
+        required
+        minlength="1"
+        maxlength="30"
+        placeholder="Digite el id empleado"
+        #detalleplanillas="ngModel"
+      />
+      <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+        <div *ngIf="detalleplanillas.errors?.['required']">
+          Digite el id  empleado por favor
+        </div>
+        <div *ngIf="detalleplanillas.errors?.['minlength']">
+          El id empleado tiene que contener como mínimo 1 caracteres
+        </div>
+        <div *ngIf="detalleplanillas.errors?.['maxlength']">
+          El id empleado tiene que tener como máximo 30 caracteres
+        </div>
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label>Id Planilla</label>
+        <input
+          type="text"
+          class="form-control"
+          id="id_planilla"
+          [(ngModel)]="detalleplanilla.id_planilla"
+          name="id_planilla"
+          required
+          minlength="1"
+          maxlength="30"
+          placeholder="Digite el id planilla"
+          #detalleplanillas="ngModel"
+        />
+        <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+          <div *ngIf="detalleplanillas.errors?.['required']">
+            Digite el id planilla por favor
+          </div>
+          <div *ngIf="detalleplanillas.errors?.['minlength']">
+            El id planilla tiene que contener como mínimo 1 caracteres
+          </div>
+          <div *ngIf="detalleplanillas.errors?.['maxlength']">
+            El id planilla tiene que tener como máximo 30 caracteres
+          </div>
+        </div>
+        </div>
+
+        <div class="form-group">
+            <label>Salario Mensual</label>
+            <input
+              type="text"
+              class="form-control"
+              id="salario_mensual"
+              [(ngModel)]="detalleplanilla.salario_mensual"
+              name="salario_mensual"
+              required
+              minlength="1"
+              maxlength="30"
+              placeholder="Digite el salario mensual"
+              #detalleplanillas="ngModel"
+            />
+            <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+              <div *ngIf="detalleplanillas.errors?.['required']">
+                Digite el salario mensual por favor
+              </div>
+              <div *ngIf="detalleplanillas.errors?.['minlength']">
+                El salario mensual tiene que contener como mínimo 1 caracteres
+              </div>
+              <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                El salario mensual tiene que tener como máximo 30 caracteres
+              </div>
+            </div>
+            </div>
+
+         <div class="form-group">
+                <label>Aguinaldo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="aguinaldo"
+                  [(ngModel)]="detalleplanilla.aguinaldo"
+                  name="aguinaldo"
+                  required
+                  minlength="1"
+                  maxlength="30"
+                  placeholder="Digite el aguinaldo"
+                  #detalleplanillas="ngModel"
+                />
+                <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                  <div *ngIf="detalleplanillas.errors?.['required']">
+                    Digite el aguinaldo por favor
+                  </div>
+                  <div *ngIf="detalleplanillas.errors?.['minlength']">
+                    El aguinaldo tiene que contener como mínimo 1 caracteres
+                  </div>
+                  <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                    El aguinaldo tiene que tener como máximo 30 caracteres
+                  </div>
+                </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Bonificacion</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="bonificacion"
+                      [(ngModel)]="detalleplanilla.bonificacion"
+                      name="bonificacion"
+                      required
+                      minlength="1"
+                      maxlength="30"
+                      placeholder="Digite la bonificacion"
+                      #detalleplanillas="ngModel"
+                    />
+                    <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                      <div *ngIf="detalleplanillas.errors?.['required']">
+                        Digite la bonificacion por favor
+                      </div>
+                      <div *ngIf="detalleplanillas.errors?.['minlength']">
+                        La bonificacion tiene que contener como mínimo 1 caracteres
+                      </div>
+                      <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                        La bonificacion tiene que tener como máximo 30 caracteres
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Deduccion AFP</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="deduccionAFP"
+                          [(ngModel)]="detalleplanilla.deduccionAFP"
+                          name="deduccionAFP"
+                          required
+                          minlength="1"
+                          maxlength="30"
+                          placeholder="Digite la deduccionAFP"
+                          #detalleplanillas="ngModel"
+                        />
+                        <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                          <div *ngIf="detalleplanillas.errors?.['required']">
+                            Digite La deduccionAFP por favor
+                          </div>
+                          <div *ngIf="detalleplanillas.errors?.['minlength']">
+                            La deduccionAFP tiene que contener como mínimo 1 caracteres
+                          </div>
+                          <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                            La deduccionAFP tiene que tener como máximo 30 caracteres
+                          </div>
+                        </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Deduccion ISSS</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="deduccionISSS"
+                              [(ngModel)]="detalleplanilla.deduccionISSS"
+                              name="deduccionISSS"
+                              required
+                              minlength="1"
+                              maxlength="30"
+                              placeholder="Digite la deduccionISSS"
+                              #detalleplanillas="ngModel"
+                            />
+                            <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                              <div *ngIf="detalleplanillas.errors?.['required']">
+                                Digite La deduccionISSS por favor
+                              </div>
+                              <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                La deduccionISSS tiene que contener como mínimo 1 caracteres
+                              </div>
+                              <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                La deduccionISSS tiene que tener como máximo 30 caracteres
+                              </div>
+                            </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Deduccion Renta</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="deduccionrenta"
+                                  [(ngModel)]="detalleplanilla.deduccionrenta"
+                                  name="deduccionrenta"
+                                  required
+                                  minlength="1"
+                                  maxlength="30"
+                                  placeholder="Digite la deduccionrenta"
+                                  #detalleplanillas="ngModel"
+                                />
+                                <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                                  <div *ngIf="detalleplanillas.errors?.['required']">
+                                    Digite La deduccionrenta por favor
+                                  </div>
+                                  <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                    La deduccionrenta tiene que contener como mínimo 1 caracteres
+                                  </div>
+                                  <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                    La deduccionrenta tiene que tener como máximo 30 caracteres
+                                  </div>
+                                </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Descuentos</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="descuentos"
+                                      [(ngModel)]="detalleplanilla.descuentos"
+                                      name="descuentos"
+                                      required
+                                      minlength="1"
+                                      maxlength="30"
+                                      placeholder="Digite los descuentos"
+                                      #detalleplanillas="ngModel"
+                                    />
+                                    <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                                      <div *ngIf="detalleplanillas.errors?.['required']">
+                                        Digite los descuentos por favor
+                                      </div>
+                                      <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                        Los descuentos tiene que contener como mínimo 1 caracteres
+                                      </div>
+                                      <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                        Los descuentos tiene que tener como máximo 30 caracteres
+                                      </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Prestamos</label>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="prestamos"
+                                          [(ngModel)]="detalleplanilla.prestamos"
+                                          name="prestamos"
+                                          required
+                                          minlength="1"
+                                          maxlength="30"
+                                          placeholder="Digite los prestamos"
+                                          #detalleplanillas="ngModel"
+                                        />
+                                        <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                                          <div *ngIf="detalleplanillas.errors?.['required']">
+                                            Digite los prestamos por favor
+                                          </div>
+                                          <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                            Los prestamos tiene que contener como mínimo 1 caracteres
+                                          </div>
+                                          <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                            Los prestamos tiene que tener como máximo 30 caracteres
+                                          </div>
+                                        </div>
+                                        </div> 
+
+                                        <div class="form-group">
+                                            <label> Salario Neto </label>
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              id="salario_neto"
+                                              [(ngModel)]="detalleplanilla.salario_neto"
+                                              name="salario_neto"
+                                              required
+                                              minlength="1"
+                                              maxlength="30"
+                                              placeholder="Digite el salario neto"
+                                              #detalleplanillas="ngModel"
+                                            />
+                                            <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                                              <div *ngIf="detalleplanillas.errors?.['required']">
+                                                Digite el salario neto por favor
+                                              </div>
+                                              <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                                el salario neto tiene que contener como mínimo 1 caracteres
+                                              </div>
+                                              <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                                el salario neto tiene que tener como máximo 30 caracteres
+                                              </div>
+                                            </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label> Fecha Pago </label>
+                                                <input
+                                                  type="text"
+                                                  class="form-control"
+                                                  id="fecha_pago"
+                                                  [(ngModel)]="detalleplanilla.fecha_pago"
+                                                  name="fecha_pago"
+                                                  required
+                                                  minlength="1"
+                                                  maxlength="30"
+                                                  placeholder="Digite la fecha pago"
+                                                  #detalleplanillas="ngModel"
+                                                />
+                                                <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                                                  <div *ngIf="detalleplanillas.errors?.['required']">
+                                                    Digite la fecha pago por favor
+                                                  </div>
+                                                  <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                                    La fecha pago tiene que contener como mínimo 1 caracteres
+                                                  </div>
+                                                  <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                                    La fecha pago tiene que tener como máximo 30 caracteres
+                                                  </div>
+                                                </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label> Observaciones </label>
+                                                    <input
+                                                      type="text"
+                                                      class="form-control"
+                                                      id="observaciones"
+                                                      [(ngModel)]="detalleplanilla.observaciones"
+                                                      name="observaciones"
+                                                      required
+                                                      minlength="1"
+                                                      maxlength="30"
+                                                      placeholder="Digite la observacion"
+                                                      #detalleplanillas="ngModel"
+                                                    />
+                                                    <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                                                      <div *ngIf="detalleplanillas.errors?.['required']">
+                                                        Digite la observacion por favor
+                                                      </div>
+                                                      <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                                        La  observacion tiene que contener como mínimo 1 caracteres
+                                                      </div>
+                                                      <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                                        La  observacion tiene que tener como máximo 30 caracteres
+                                                      </div>
+                                                    </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label> Fecha Creacion </label>
+                                                        <input
+                                                          type="text"
+                                                          class="form-control"
+                                                          id="fecha_creacion"
+                                                          [(ngModel)]="detalleplanilla.fecha_creacion"
+                                                          name="fecha_creacion"
+                                                          required
+                                                          minlength="1"
+                                                          maxlength="30"
+                                                          placeholder="Digite la fecha creacion"
+                                                          #detalleplanillas="ngModel"
+                                                        />
+                                                        <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                                                          <div *ngIf="detalleplanillas.errors?.['required']">
+                                                            Digite la fecha creacion por favor
+                                                          </div>
+                                                          <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                                            La  fecha creacion tiene que contener como mínimo 1 caracteres
+                                                          </div>
+                                                          <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                                            La  fecha creacion tiene que tener como máximo 30 caracteres
+                                                          </div>
+                                                        </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label> Nombre de Empleado que Elaboro </label>
+                                                            <input
+                                                              type="text"
+                                                              class="form-control"
+                                                              id="nombre_empleadoque_elaboro"
+                                                              [(ngModel)]="detalleplanilla.nombre_empleadoque_elaboro"
+                                                              name="nombre_empleadoque_elaboro"
+                                                              required
+                                                              minlength="1"
+                                                              maxlength="30"
+                                                              placeholder="Digite el nombre de empleado que elaboro"
+                                                              #detalleplanillas="ngModel"
+                                                            />
+                                                            <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                                                              <div *ngIf="detalleplanillas.errors?.['required']">
+                                                                Digite  el nombre de empleado que elaboro  por favor
+                                                              </div>
+                                                              <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                                                El nombre de empleado que elaboro tiene que contener como mínimo 1 caracteres
+                                                              </div>
+                                                              <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                                                El nombre de empleado que elaboro que tener como máximo 30 caracteres
+                                                              </div>
+                                                            </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label> Nombre de Empleado que Autorizo </label>
+                                                                <input
+                                                                  type="text"
+                                                                  class="form-control"
+                                                                  id="nombre_empleado_autorizo"
+                                                                  [(ngModel)]="detalleplanilla.nombre_empleado_autorizo"
+                                                                  name="nombre_empleado_autorizo"
+                                                                  required
+                                                                  minlength="1"
+                                                                  maxlength="30"
+                                                                  placeholder="Digite el nombre de empleado que autorizo"
+                                                                  #detalleplanillas="ngModel"
+                                                                />
+                                                                <div class="alert alert-danger" *ngIf="detalleplanillas.invalid && (detalleplanillas.dirty || detalleplanillas.touched)">
+                                                                  <div *ngIf="detalleplanillas.errors?.['required']">
+                                                                    Digite  el nombre de empleado que autorizo  por favor
+                                                                  </div>
+                                                                  <div *ngIf="detalleplanillas.errors?.['minlength']">
+                                                                    El nombre de empleado que autorizo tiene que contener como mínimo 1 caracteres
+                                                                  </div>
+                                                                  <div *ngIf="detalleplanillas.errors?.['maxlength']">
+                                                                    El nombre de empleado que autorizo que tener como máximo 30 caracteres
+                                                                  </div>
+                                                                </div>
+                                                                </div>
+
+                                                                <button class="btn btn-success" [disabled]="!detalleplanillasForm.form.valid">Guardar</button>
+                                                            </form>
+                                           
+                                                

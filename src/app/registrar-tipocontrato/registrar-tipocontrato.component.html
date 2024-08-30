@@ -1,0 +1,15 @@
+<div class="col-md-6 offset-md-3"></div>
+<h3 class="text-center">Registro de Tipo de Contrato</h3>
+
+<form (ngSubmit)= "onSubmit()">
+
+    <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text"
+        class="form-control"
+        id="nombre"
+        [(ngModel)] = "tipocontrato.nombre"
+        name ="nombre">  
+    </div>
+    <button class="btn btn-success">Guardar</button>
+</form>

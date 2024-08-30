@@ -1,0 +1,204 @@
+<div class="col-md-6 offset-md-3"></div>
+    <h3 class="text-center">Edición de Aguinaldo</h3>
+
+    <form (ngSubmit)="onSubmit()" #aguinaldoForm="ngForm" >
+
+      <div class="form-group">
+      <label>Nombre Empleado: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre_empleado"
+        [(ngModel)]="aguinaldo.nombre_empleado"
+        name="nombre_empleado"
+        required
+        minlength="4"
+        maxlength="30"
+        placeholder="Digite el nombre del empleado"
+        #nombre="ngModel"
+        />
+      <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+        <div *ngIf="nombre.errors?.['required']">
+          Digite el nombre del empleado por favor
+        </div>
+        <div *ngIf="nombre.errors?.['minlength']">
+          El nombre del empleado tiene que contener como mínimo 4 caracteres
+        </div>
+        <div *ngIf="nombre.errors?.['maxlength']">
+          El nombre del empleado tiene que tener como máximo 30 caracteres
+        </div>
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label>Id Empleado: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="id_empleado"
+          [(ngModel)]="aguinaldo.id_empleado"
+          name="id_empleado"
+          required
+          minlength="1"
+          maxlength="30"
+          placeholder="Digite el id del empleado"
+          #id="ngModel"
+          />
+        <div class="alert alert-danger" *ngIf="id.invalid && (id.dirty || id.touched)">
+          <div *ngIf="id.errors?.['required']">
+            Digite el id del empleado por favor
+          </div>
+          <div *ngIf="id.errors?.['minlength']">
+            El id del empleado tiene que contener como mínimo 1 caracteres
+          </div>
+          <div *ngIf="id.errors?.['maxlength']">
+            El id del empleado tiene que tener como máximo 30 caracteres
+          </div>
+        </div>
+        </div>
+        
+        <div class="form-group">
+        <label>Año: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="anio"
+          [(ngModel)]="aguinaldo.anio"
+          name="anio"
+          required
+          minlength="4"
+          maxlength="30"
+          placeholder="Digite el año"
+          #anio="ngModel"
+          />
+        <div class="alert alert-danger" *ngIf="anio.invalid && (anio.dirty || anio.touched)">
+          <div *ngIf="anio.errors?.['required']">
+            Digite el año del empleado por favor
+          </div>
+          <div *ngIf="anio.errors?.['minlength']">
+            El año tiene que contener como mínimo 4 caracteres
+          </div>
+          <div *ngIf="anio.errors?.['maxlength']">
+            El año tiene que tener como máximo 30 caracteres
+          </div>
+        </div>
+        </div>
+        
+<div class="form-group">
+        <label>Salario Base: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="salario_base"
+          [(ngModel)]="aguinaldo.salario_base"
+          name="salario_base"
+          required
+          minlength="1"
+          maxlength="30"
+          placeholder="Digite el salario base"
+          #salario="ngModel"
+          />
+        <div class="alert alert-danger" *ngIf="salario.invalid && (salario.dirty || salario.touched)">
+          <div *ngIf="salario.errors?.['required']">
+            Digite el salario por favor
+          </div>
+          <div *ngIf="salario.errors?.['minlength']">
+            El salario tiene que contener como mínimo 1 caracteres
+          </div>
+          <div *ngIf="salario.errors?.['maxlength']">
+            El salario tiene que tener como máximo 30 caracteres
+          </div>
+        </div>
+        </div>
+
+        <div class="form-group">
+            <label>Dias Aguinaldos: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="dias_aguinaldos"
+              [(ngModel)]="aguinaldo.dias_aguinaldos"
+              name="dias_aguinaldos"
+              required
+              minlength="1"
+              maxlength="30"
+              placeholder="Digite los dias de aguinaldos"
+              #dias="ngModel"
+              />
+            <div class="alert alert-danger" *ngIf="dias.invalid && (dias.dirty || dias.touched)">
+              <div *ngIf="dias.errors?.['required']">
+                Digite los dias de aguinaldos por favor
+              </div>
+              <div *ngIf="dias.errors?.['minlength']">
+                Los dias de aguinaldos tiene que contener como mínimo 1 caracteres
+              </div>
+              <div *ngIf="dias.errors?.['maxlength']">
+                El dias de aguinaldo tiene que tener como máximo 30 caracteres
+              </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+                <label>Monto Aguinaldo: </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="monto_aguinaldo"
+                  [(ngModel)]="aguinaldo.monto_aguinaldo"
+                  name="monto_aguinaldo"
+                  required
+                  minlength="1"
+                  maxlength="30"
+                  placeholder="Digite el monto aguinaldo"
+                  #monto="ngModel"
+                  />
+                <div class="alert alert-danger" *ngIf="monto.invalid && (monto.dirty || monto.touched)">
+                  <div *ngIf="monto.errors?.['required']">
+                    Digite el monto aguinaldo por favor
+                  </div>
+                  <div *ngIf="dias.errors?.['minlength']">
+                    El monto aguinaldo tiene que contener como mínimo 1 caracteres
+                  </div>
+                  <div *ngIf="dias.errors?.['maxlength']">
+                    El monto aguinaldo tiene que tener como máximo 30 caracteres
+                  </div>
+                </div>
+                </div>       
+                
+                <div class="form-group">
+                    <label>Fecha Creacion: </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fecha_creacion"
+                      [(ngModel)]="aguinaldo.fecha_creacion"
+                      name="fecha_creacion"
+                      required
+                      minlength="1"
+                      maxlength="30"
+                      placeholder="Digite la fecha creacion"
+                      #fecha="ngModel"
+                      />
+                    <div class="alert alert-danger" *ngIf="fecha.invalid && (monto.dirty || fecha.touched)">
+                      <div *ngIf="fecha.errors?.['required']">
+                        Digite la fecha de creacion por favor
+                      </div>
+                      <div *ngIf="fecha.errors?.['minlength']">
+                       La fecha de creacion tiene que contener como mínimo 1 caracteres
+                      </div>
+                      <div *ngIf="fecha.errors?.['maxlength']">
+                        La fecha_creaciontiene que tener como máximo 30 caracteres
+                      </div>
+                    </div>
+                    </div>        
+                    
+                    
+      <button class="btn btn-success" [disabled]="!aguinaldoForm.form.valid">Guardar</button>
+    </form>
+  
+
+            
+
+            
+      
+

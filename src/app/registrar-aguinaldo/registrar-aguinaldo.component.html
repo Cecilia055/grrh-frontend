@@ -1,0 +1,69 @@
+<div class="col-md-6 offset-md-3"></div>
+<h3 class="text-center">Registro de Aguinaldo</h3>
+
+<form (ngSubmit)= "onSubmit()">
+
+    <div class="form-group">
+        <label>Nombre Empleado:</label>
+        <input type="text"
+        class="form-control"
+        id="nombre_empleado"
+        [(ngModel)] = "aguinaldo.nombre_empleado"
+        name ="nombre_empleado">  
+    </div>
+    <div class="form-group">
+        <label>Id Empleado:</label>
+        <input type="text"
+        class="form-control"
+        id="id_aguinaldo"
+        [(ngModel)] = "aguinaldo.id_empleado"
+        name ="id_aguinaldo">  
+    </div>
+    <div class="form-group">
+        <label>Año:</label>
+        <input type="text"
+        class="form-control"
+        id="anio"
+        [(ngModel)] = "aguinaldo.anio"
+        name ="anio">  
+    </div>
+    <div class="form-group">
+        <label>Salario Base:</label>
+        <input type="text"
+        class="form-control"
+        id="salario_base"
+        [(ngModel)] = "aguinaldo.salario_base"
+        name ="salario_base">  
+    </div>
+    <div class="form-group">
+        <label>Dias Aguinaldos:</label>
+        <input type="text"
+        class="form-control"
+        id="dias_aguinaldos"
+        [(ngModel)] = "aguinaldo.dias_aguinaldos"
+        name ="dias_aguinaldos">  
+    </div>
+    <div class="form-group">
+        <label>Monto Aguinaldo:</label>
+        <input type="text"
+        class="form-control"
+        id="monto_aguinaldo"
+        [(ngModel)] = "aguinaldo.monto_aguinaldo"
+        name ="monto_aguinaldo">  
+    </div>
+    <div class="form-group">
+        <label>Fecha Creacion:</label>
+        <input type="text"
+        class="form-control"
+        id="fecha_creacion"
+        [(ngModel)] = "aguinaldo.fecha_creacion"
+        name ="fecha_creacion">  
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+</form>
+
+
+
+
+

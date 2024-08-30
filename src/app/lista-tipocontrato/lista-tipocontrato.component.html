@@ -1,0 +1,20 @@
+<h2>Lista de Tipos de Contratos</h2>
+<table class="table table-striped">
+<thead class="table-dark">
+    <tr>
+        <th>Nombre</th>   
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor= "let tipocontrato of tipocontrato">
+    <td>{{tipocontrato.nombre}}</td>
+   
+    
+    <button (click)= "actualizarTipoContrato(tipocontrato.idtipocontrato)" class="btn btn-info">Editar</button>
+    <button (click)= "eliminarTipoContrato(tipocontrato.idtipocontrato)" class="btn btn-danger" style="margin-left: 10px">Eliminar</button>
+    <button (click)= "verDetallesDelTipodeContrato(tipocontrato.idtipocontrato)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
+  
+</tr>
+</tbody>
+</table>
+

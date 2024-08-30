@@ -1,0 +1,32 @@
+<h2>Lista de Ausencias</h2>
+<table class="table table-striped">
+<thead class="table-dark">
+    <tr>
+        <th>Nombre Empleado</th>
+        <th>Id Empleado</th>
+        <th>Fecha Inicio</th>
+        <th>Fecha Fin</th>
+        <th>Dias Ausentes</th>
+        <th>Comentarios</th>
+        <th>Id Tipo Ausencia</th>
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor= "let ausencia of ausencias">
+    <td>{{ausencia.nombre_empleado}}</td> 
+    <td>{{ausencia.id_empleado}}</td>
+    <td>{{ausencia.fecha_inicio}}</td>
+    <td>{{ausencia.fecha_fin}}</td>
+    <td>{{ausencia.dias_ausentes}}</td>
+    <td>{{ausencia.comentarios}}</td>
+    <td>{{ausencia.idtipo_ausencia}}</td>
+    
+
+    <button (click)= "actualizarAusencia(ausencia.idausencia)" class="btn btn-info">Editar</button>
+    <button (click)= "eliminarAusencia(ausencia.idausencia)" class="btn btn-danger" style="margin-left: 10px">Eliminar</button>
+    <button (click)= "verDetallesDeAusencia(ausencia.idausencia)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
+  
+</tr>
+</tbody>
+</table>
+

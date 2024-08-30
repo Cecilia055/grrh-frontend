@@ -1,0 +1,156 @@
+<div class="col-md-6 offset-md-3"></div>
+<h3 class="text-center">Registro de Detalle de Planilla</h3>
+
+<form (ngSubmit)= "onSubmit()">
+
+    <div class="form-group">
+        <label>Nombre Empleado:</label>
+        <input type="text"
+        class="form-control"
+        id="nombre_empleado"
+        [(ngModel)] = "detalleplanilla.nombre_empleado"
+        name ="nombre_empleado">  
+    </div>
+    <div class="form-group">
+        <label>Id Empleado:</label>
+        <input type="text"
+        class="form-control"
+        id="id_empleado"
+        [(ngModel)] = "detalleplanilla.id_empleado"
+        name ="id_empleado">
+    </div>
+    <div class="form-group">
+        <label>Id Planilla:</label>
+        <input type="text"
+        class="form-control"
+        id="id_planilla"
+        [(ngModel)] = "detalleplanilla.id_planilla"
+        name ="id_planilla">
+    </div>
+    <div class="form-group">
+        <label>Salario Mensual :</label>
+        <input type="text"
+        class="form-control"
+        id="salario_mensual"
+        [(ngModel)] = "detalleplanilla.salario_mensual"
+        name ="salario_mensual">
+    </div>
+    <div class="form-group">
+        <label>Aguinaldo :</label>
+        <input type="text"
+        class="form-control"
+        id="aguinaldo"
+        [(ngModel)] = "detalleplanilla.aguinaldo"
+        name ="aguinaldo">
+    </div>
+    <div class="form-group">
+        <label>Bonificacion :</label>
+        <input type="text"
+        class="form-control"
+        id="bonificacion"
+        [(ngModel)] = "detalleplanilla.bonificacion"
+        name ="bonificacion">
+    </div>
+    <div class="form-group">
+        <label>Deduccion AFP:</label>
+        <input type="text"
+        class="form-control"
+        id="deduccionAFP"
+        [(ngModel)] = "detalleplanilla.deduccionAFP"
+        name ="deduccionAFP">
+    </div>
+
+    <div class="form-group">
+        <label>Deduccion ISSS:</label>
+        <input type="text"
+        class="form-control"
+        id="deduccionISSS"
+        [(ngModel)] = "detalleplanilla.deduccionISSS"
+        name ="deduccionISSS">
+    </div>
+
+    <div class="form-group">
+        <label>Deduccion Renta :</label>
+        <input type="text"
+        class="form-control"
+        id="deduccionrenta"
+        [(ngModel)] = "detalleplanilla.deduccionrenta"
+        name ="deduccionrenta">
+    </div>
+
+    <div class="form-group">
+        <label>Descuentos :</label>
+        <input type="text"
+        class="form-control"
+        id="descuentos"
+        [(ngModel)] = "detalleplanilla.descuentos"
+        name ="descuentos">
+    </div>
+
+    <div class="form-group">
+        <label>Prestamos:</label>
+        <input type="text"
+        class="form-control"
+        id="prestamos"
+        [(ngModel)] = "detalleplanilla.prestamos"
+        name ="prestamos">
+    </div>
+
+    <div class="form-group">
+        <label>Salario Neto :</label>
+        <input type="text"
+        class="form-control"
+        id="salario_neto"
+        [(ngModel)] = "detalleplanilla.salario_neto"
+        name ="salario_neto">
+    </div>
+
+    <div class="form-group">
+        <label>Fecha Pago :</label>
+        <input type="text"
+        class="form-control"
+        id="fecha_pago"
+        [(ngModel)] = "detalleplanilla.fecha_pago"
+        name ="fecha_pago">
+    </div>
+
+    <div class="form-group">
+        <label>Observaciones :</label>
+        <input type="text"
+        class="form-control"
+        id="observaciones"
+        [(ngModel)] = "detalleplanilla.observaciones"
+        name ="observaciones">
+    </div>
+
+    <div class="form-group">
+        <label>Fecha Creacion :</label>
+        <input type="text"
+        class="form-control"
+        id="fecha_creacion"
+        [(ngModel)] = "detalleplanilla.fecha_creacion"
+        name ="fecha_creacion">
+    </div>
+
+    <div class="form-group">
+        <label>Nombre de Empleado que Elaboro :</label>
+        <input type="text"
+        class="form-control"
+        id="nombre_empleadoque_elaboro"
+        [(ngModel)] = "detalleplanilla.nombre_empleadoque_elaboro"
+        name ="nombre_empleadoque_elaboro">
+    </div>
+    <div class="form-group">
+        <label>Nombre de Empleado que Autorizo :</label>
+        <input type="text"
+        class="form-control"
+        id="nombre_empleado_autorizo"
+        [(ngModel)] = "detalleplanilla.nombre_empleado_autorizo"
+        name ="nombre_empleado_autorizo">
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+</form>
+
+
+

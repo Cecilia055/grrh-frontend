@@ -1,0 +1,63 @@
+<div class="col-md-6 offset-md-3"></div>
+    <h3 class="text-center">Edición de Tipo de Documento</h3>
+
+    <form (ngSubmit)="onSubmit()" #tiposcForm="ngForm" >
+
+      <div class="form-group">
+      <label>Tipo : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="tipo"
+        [(ngModel)]="tipodocumento.tipo"
+        name="tipo"
+        required
+        minlength="1"
+        maxlength="30"
+        placeholder="Digite el tipo"
+        #tipo="ngModel"
+      />
+      <div class="alert alert-danger" *ngIf="tipo.invalid && (tipo.dirty || tipo.touched)">
+        <div *ngIf="tipo.errors?.['required']">
+          Digite el Tipo por favor
+        </div>
+        <div *ngIf="tipo.errors?.['minlength']">
+          El tipo tiene que contener como mínimo 1 caracteres
+        </div>
+        <div *ngIf="tipo.errors?.['maxlength']">
+          El tipo tiene que tener como máximo 30 caracteres
+        </div>
+      </div>
+      </div>
+      
+      <div class="form-group">
+        <label>Descripcion : </label>
+        <input
+          type="text"
+          class="form-control"
+          id="descripcion"
+          [(ngModel)]="tipodocumento.descripcion"
+          name="descripcion"
+          required
+          minlength="1"
+          maxlength="30"
+          placeholder="Digite la descripcion"
+          #Descrip="ngModel"
+        />
+        <div class="alert alert-danger" *ngIf="Descrip.invalid && (Descrip.dirty || Descrip.touched)">
+          <div *ngIf="Descrip.errors?.['required']">
+            Digite la descripcion por favor
+          </div>
+          <div *ngIf="Descrip.errors?.['minlength']">
+            la descripcion tiene que contener como mínimo 1 caracteres
+          </div>
+          <div *ngIf="Descrip.errors?.['maxlength']">
+            la descripcion tiene que tener como máximo 30 caracteres
+          </div>
+        </div>
+        </div>
+
+        <button class="btn btn-success" [disabled]="!tiposcForm.form.valid">Guardar</button>
+    </form>
+   
+  

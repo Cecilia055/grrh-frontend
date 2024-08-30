@@ -1,0 +1,192 @@
+<div class="col-md-6 offset-md-3"></div>
+    <h3 class="text-center">Edición de Ausencia</h3>
+
+    <form (ngSubmit)="onSubmit()" #ausenciaForm="ngForm" >
+
+      <div class="form-group">
+      <label>Nombre Empleado : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre_empleado"
+        [(ngModel)]="ausencia.nombre_empleado"
+        name="nombre_empleado"
+        required
+        minlength="4"
+        maxlength="30"
+        placeholder="Digite el nombre del empleado"
+        #nombre="ngModel"
+      />
+      <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+        <div *ngIf="nombre.errors?.['required']">
+          Digite el nombre del empleado por favor
+        </div>
+        <div *ngIf="nombre.errors?.['minlength']">
+          El nombre del empleado tiene que contener como mínimo 4 caracteres
+        </div>
+        <div *ngIf="nombre.errors?.['maxlength']">
+          El nombre del empleado tiene que tener como máximo 30 caracteres
+        </div>
+      </div>
+      </div>
+      <div class="form-group">
+        <label>Id Empleado : </label>
+        <input
+          type="text"
+          class="form-control"
+          id="id_empleado"
+          [(ngModel)]="ausencia.id_empleado"
+          name="id_empleado"
+          required
+          minlength="1"
+          maxlength="30"
+          placeholder="Digite el id del empleado"
+          #id="ngModel"
+        />
+        <div class="alert alert-danger" *ngIf="id.invalid && (id.dirty || id.touched)">
+          <div *ngIf="id.errors?.['required']">
+            Digite el id del empleado por favor
+          </div>
+          <div *ngIf="id.errors?.['minlength']">
+            El id del empleado tiene que contener como mínimo 4 caracteres
+          </div>
+          <div *ngIf="id.errors?.['maxlength']">
+            El id del empleado tiene que tener como máximo 30 caracteres
+          </div>
+        </div>
+        </div>
+        <div class="form-group">
+            <label>Fecha Inicio : </label>
+            <input
+              type="text"
+              class="form-control"
+              id="fecha_inicio"
+              [(ngModel)]="ausencia.fecha_inicio"
+              name="fecha_inicio"
+              required
+              minlength="4"
+              maxlength="30"
+              placeholder="Digite la fecha de inicio"
+              #fecha="ngModel"
+            />
+            <div class="alert alert-danger" *ngIf="fecha.invalid && (fecha.dirty || fecha.touched)">
+              <div *ngIf="fecha.errors?.['required']">
+                Digite la fecha de inicio por favor
+              </div>
+              <div *ngIf="nombre.errors?.['minlength']">
+               La fecha de inicio tiene que contener como mínimo 4 caracteres
+              </div>
+              <div *ngIf="nombre.errors?.['maxlength']">
+                La fecha de inicio tiene que tener como máximo 30 caracteres
+              </div>
+            </div>
+            </div>
+            <div class="form-group">
+                <label>Fecha Fin : </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fecha_fin"
+                  [(ngModel)]="ausencia.fecha_fin"
+                  name="fecha_fin"
+                  required
+                  minlength="4"
+                  maxlength="30"
+                  placeholder="Digite la fecha fin"
+                  #fecha="ngModel"
+                />
+                <div class="alert alert-danger" *ngIf="fecha.invalid && (fecha.dirty || fecha.touched)">
+                  <div *ngIf="fecha.errors?.['required']">
+                    Digite la fecha fin por favor
+                  </div>
+                  <div *ngIf="nombre.errors?.['minlength']">
+                   La fecha fin tiene que contener como mínimo 4 caracteres
+                  </div>
+                  <div *ngIf="nombre.errors?.['maxlength']">
+                    La fecha fin tiene que tener como máximo 30 caracteres
+                  </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <label>Dias Ausentes : </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dias_ausentes"
+                      [(ngModel)]="ausencia.dias_ausentes"
+                      name="dias_ausentes"
+                      required
+                      minlength="1"
+                      maxlength="30"
+                      placeholder="Digite los dias ausentes"
+                      #dia="ngModel"
+                    />
+                    <div class="alert alert-danger" *ngIf="dia.invalid && (dia.dirty || dia.touched)">
+                      <div *ngIf="dia.errors?.['required']">
+                        Digite los dias ausentes por favor
+                      </div>
+                      <div *ngIf="dia.errors?.['minlength']">
+                       Los dias ausentes tiene que contener como mínimo 1 caracteres
+                      </div>
+                      <div *ngIf="dia.errors?.['maxlength']">
+                        La fecha de inicio tiene que tener como máximo 30 caracteres
+                      </div>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Comentarios : </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="comentarios"
+                          [(ngModel)]="ausencia.comentarios"
+                          name="comentarios"
+                          required
+                          minlength="4"
+                          maxlength="30"
+                          placeholder="Digite el comentario"
+                          #comen="ngModel"
+                        />
+                        <div class="alert alert-danger" *ngIf="comen.invalid && (comen.dirty || comen.touched)">
+                          <div *ngIf="comen.errors?.['required']">
+                            Digite el comentario por favor
+                          </div>
+                          <div *ngIf="comen.errors?.['minlength']">
+                           El comentario tiene que contener como mínimo 4 caracteres
+                          </div>
+                          <div *ngIf="comen.errors?.['maxlength']">
+                            El comentario tiene que tener como máximo 30 caracteres
+                          </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Id Tipo Ausencia : </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="idtipo_ausencia"
+                              [(ngModel)]="ausencia.idtipo_ausencia"
+                              name="idtipo_ausencia"
+                              required
+                              minlength="1"
+                              maxlength="30"
+                              placeholder="Digite el id tipo ausencia"
+                              #tipo="ngModel"
+                            />
+                            <div class="alert alert-danger" *ngIf="tipo.invalid && (tipo.dirty || tipo.touched)">
+                              <div *ngIf="tipo.errors?.['required']">
+                                Digite el id tipo ausencia por favor
+                              </div>
+                              <div *ngIf="tipo.errors?.['minlength']">
+                               El id tipo ausencia tiene que contener como mínimo 1 caracteres
+                              </div>
+                              <div *ngIf="tipo.errors?.['maxlength']">
+                                El id tipo ausencia tiene que tener como máximo 30 caracteres
+                              </div>
+                            </div>
+                            </div>
+                            
+                        <button class="btn btn-success" [disabled]="!ausenciaForm.form.valid">Guardar</button>
+                     </form>
+                    
+                

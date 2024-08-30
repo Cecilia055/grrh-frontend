@@ -1,0 +1,64 @@
+<div class="col-md-6 offset-md-3"></div>
+<h3 class="text-center">Registro de Ausencia</h3>
+
+<form (ngSubmit)= "onSubmit()">
+
+    <div class="form-group">
+        <label>Nombre Empleado:</label>
+        <input type="text"
+        class="form-control"
+        id="nombre_empleado"
+        [(ngModel)] = "ausencia.nombre_empleado"
+        name ="nombre_empleado">  
+    </div>
+    <div class="form-group">
+        <label>Id Empleado:</label>
+        <input type="text"
+        class="form-control"
+        id="id_empleado"
+        [(ngModel)] = "ausencia.id_empleado"
+        name ="id_empleado">  
+    </div>
+    <div class="form-group">
+        <label>Fecha Inicio:</label>
+        <input type="text"
+        class="form-control"
+        id="fecha_inicio"
+        [(ngModel)] = "ausencia.fecha_inicio"
+        name ="fecha_inicio">  
+    </div>
+    <div class="form-group">
+        <label>Fecha Fin:</label>
+        <input type="text"
+        class="form-control"
+        id="fecha_fin"
+        [(ngModel)] = "ausencia.fecha_fin"
+        name ="fecha_fin">  
+    </div>
+    <div class="form-group">
+        <label>Dias Ausentes:</label>
+        <input type="text"
+        class="form-control"
+        id="dias_ausentes"
+        [(ngModel)] = "ausencia.dias_ausentes"
+        name ="dias_ausentes">  
+    </div>
+    <div class="form-group">
+        <label>Comentarios:</label>
+        <input type="text"
+        class="form-control"
+        id="comentarios"
+        [(ngModel)] = "ausencia.comentarios"
+        name ="comentarios">  
+    </div>
+    <div class="form-group">
+        <label>Id Tipo Ausencia:</label>
+        <input type="text"
+        class="form-control"
+        id="idtipo_ausencia"
+        [(ngModel)] = "ausencia.idtipo_ausencia"
+        name ="idtipo_ausencia">  
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+</form>

@@ -1,0 +1,33 @@
+<h2>Lista Aguinaldos</h2>
+<table class="table table-striped">
+<thead class="table-dark">
+    <tr>
+        <th>Nombre Empleado</th>
+        <th>Id Empleado</th>
+        <th>Anio</th>
+        <th>Salario Base</th>
+        <th>Dias Aguinaldos</th>
+        <th>Monto Aguinaldo </th>
+        <th>Fecha Creacion</th>
+        
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor= "let aguinaldo of aguinaldos">
+    <td>{{aguinaldo.nombre_empleado}}</td>
+    <td>{{aguinaldo.id_empleado}}</td>
+    <td>{{aguinaldo.anio}}</td>
+    <td>{{aguinaldo.salario_base}}</td>
+    <td>{{aguinaldo.dias_aguinaldos}}</td>
+    <td>{{aguinaldo.monto_aguinaldo}}</td>
+    <td>{{aguinaldo.fecha_creacion}}</td>
+   
+
+    <button (click)= "actualizarAguinaldo(aguinaldo.idaguinaldo)" class="btn btn-info">Editar</button>
+    <button (click)= "eliminarAguinaldo(aguinaldo.idaguinaldo)" class="btn btn-danger" style="margin-left: 10px">Eliminar</button>
+    <button (click)= "verDetallesDelAguinaldo(aguinaldo.idaguinaldo)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
+  
+</tr>
+</tbody>
+</table>
+

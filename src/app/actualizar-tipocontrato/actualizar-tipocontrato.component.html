@@ -1,0 +1,34 @@
+<div class="col-md-6 offset-md-3"></div>
+    <h3 class="text-center">Edición de Tipo de Contrato</h3>
+
+    <form (ngSubmit)="onSubmit()" #tiposcForm="ngForm" >
+
+      <div class="form-group">
+      <label>Nombre : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        [(ngModel)]="tipocontrato.nombre"
+        name="nombre"
+        required
+        minlength="4"
+        maxlength="30"
+        placeholder="Digite el nombre"
+        #nombre="ngModel"
+      />
+      <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+        <div *ngIf="nombre.errors?.['required']">
+          Digite el nombre por favor
+        </div>
+        <div *ngIf="nombre.errors?.['minlength']">
+          El nombre tiene que contener como mínimo 4 caracteres
+        </div>
+        <div *ngIf="nombre.errors?.['maxlength']">
+          El nombre tiene que tener como máximo 30 caracteres
+        </div>
+      </div>
+      </div>
+      <button class="btn btn-success" [disabled]="!tiposcForm.form.valid">Guardar</button>
+    </form>
+   

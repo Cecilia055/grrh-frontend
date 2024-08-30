@@ -1,0 +1,53 @@
+<h2>Lista de Detalles de Planillas</h2>
+<table class="table table-striped">
+<thead class="table-dark">
+    <tr>
+        <th>Nombre Empleado</th>
+        <th>Id Empleado</th>
+        <th>Id Planilla</th>
+        <th>Salario Mensual</th>
+        <th>Aguinaldo</th>
+        <th>Bonificacion</th>
+        <th>Deduccion AFP</th>
+        <th>Deduccion ISSS</th>
+        <th>Deduccion Renta</th>
+        <th>Descuentos</th>
+        <th>Prestamos</th>
+        <th>Salario Neto</th>
+        <th>Fecha Pago</th>
+        <th>Observaciones</th>
+        <th>Fecha Creacion</th>
+        <th>Nombre de Empleado que Elaboro</th>
+        <th>Nombre de Empleado que Autorizo</th>
+       
+    </tr>
+</thead>
+<tbody>
+    
+<tr *ngFor= "let detalleplanilla of detalleplanilla">
+    <td>{{detalleplanilla.nombre_empleado}}</td>
+    <td>{{detalleplanilla.id_empleado}}</td>
+    <td>{{detalleplanilla.id_planilla}}</td>
+    <td>{{detalleplanilla.salario_mensual}}</td>
+    <td>{{detalleplanilla.aguinaldo}}</td>
+    <td>{{detalleplanilla.bonificacion}}</td>
+    <td>{{detalleplanilla.deduccionAFP}}</td>
+    <td>{{detalleplanilla.deduccionISSS}}</td>
+    <td>{{detalleplanilla.deduccionrenta}}</td>
+    <td>{{detalleplanilla.descuentos}}</td>
+    <td>{{detalleplanilla.prestamos}}</td>
+    <td>{{detalleplanilla.salario_neto}}</td>
+    <td>{{detalleplanilla.fecha_pago}}</td>
+    <td>{{detalleplanilla.observaciones}}</td>
+    <td>{{detalleplanilla.fecha_creacion}}</td>
+    <td>{{detalleplanilla.nombre_empleadoque_elaboro}}</td>
+    <td>{{detalleplanilla.nombre_empleado_autorizo}}</td>
+
+    <button (click)= "actualizarDetallePlanilla(detalleplanilla.iddetalleplanilla)" class="btn btn-info">Editar</button>
+    <button (click)= "eliminarDetallePlanilla(detalleplanilla.iddetalleplanilla)" class="btn btn-danger" style="margin-left: 10px">Eliminar</button>
+    <button (click)= "verDetallesDeDetallePlanilla(detalleplanilla.iddetalleplanilla)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
+  
+</tr>
+</tbody>
+</table>
+
